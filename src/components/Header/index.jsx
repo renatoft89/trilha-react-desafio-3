@@ -11,8 +11,13 @@ const Header = ({autenticado}) => {
 
   let navigate = useNavigate(); 
   
-  const routeChange = () =>{ 
+  const routeChangeCadastro = () =>{ 
     let path = `/cadastro`; 
+    navigate(path);
+  }
+
+  const routeChangeLogin = () =>{ 
+    let path = `/login`; 
     navigate(path);
   }
 
@@ -37,8 +42,8 @@ const Header = ({autenticado}) => {
               ) : (
               <>
                 <MenuRight href="/">Home</MenuRight>
-                <Button title="Entrar" />
-                <Button onClick={routeChange} title="Cadastrar" />
+                <Button onClick={routeChangeLogin} title="Entrar" />
+                <Button onClick={routeChangeCadastro} title="Cadastrar" />
               </>)}
           </Row>
       </Container>

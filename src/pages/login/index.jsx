@@ -34,6 +34,11 @@ const Login = () => {
         }
     };
 
+    const routeChangeCadastro = () =>{ 
+        let path = `/cadastro`; 
+        navigate(path);
+      }
+
     console.log('errors', errors);
 
     return (<>
@@ -56,7 +61,7 @@ const Login = () => {
                 </form>
                 <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <CriarText  >Criar Conta</CriarText>
+                    <CriarText onClick={routeChangeCadastro}>Criar Conta</CriarText>
                 </Row>
                 </Wrapper>
             </Column>
